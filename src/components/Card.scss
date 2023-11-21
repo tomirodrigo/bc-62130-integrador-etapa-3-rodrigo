@@ -1,0 +1,110 @@
+.card {
+  outline: auto; /* Como el borde pero no ocupa espacio en la caja */
+  width: 220px;
+  margin-top: 8px;
+  max-width: 300px;
+  height: 400px;
+  overflow: hidden; /* Si el contenido ocupa más espacio que el tamaño del contenedor. Queda oculto */
+  border-radius: 20px;
+  border: none;
+  background-color: #F1E1C1;
+  box-shadow: 0 1px 5px #2A3340, 0 0 3px #595856;
+  color: white;
+
+  transition: all .4s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.03) skewX(0);
+    transform-origin: bottom;
+    box-shadow: 0 7px 8px #2A3340, 0 7px 7px #595856;
+  }
+
+  &:nth-child(5n + 1) {
+    background-image: linear-gradient(to top, #2A3340 0%, #595856 30%);
+    
+  }
+
+  &:nth-child(5n + 2) {
+    background-image: linear-gradient(to top, #2A3340 0%, #595856 30%);
+  }
+
+  &:nth-child(5n + 3) {
+    background-image: linear-gradient(to top, #2A3340 0%, #595856 30%);
+  }
+
+  &:nth-child(5n + 4) {
+    background-image: linear-gradient(to top, #2A3340 0%, #595856 30%);
+  }
+
+  &:nth-child(5n + 5) {
+    background-image: linear-gradient(to top, #2A3340 0%, #595856 30%);
+  }
+  
+  &__image-container {
+    height: 195px;
+    background-color: #472424;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 190px, 0 180px);
+  }
+
+  &:hover &__image-container,
+  &:focus &__image-container {
+    clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px);
+    
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%; /* 200px */
+    object-fit: cover;
+    transition: 1s;
+  }
+
+  &:hover &__image,
+  &:focus &__image {
+    transform: scale(1.4) rotate(1deg);
+    transform-origin: center;
+  }
+
+  &__content {
+    padding: 1em;
+  }
+
+  @media (min-width: 1024px) {
+    & { /* .card */
+      min-width: 240px;
+    }
+  }
+
+  @media (min-width: 426px) and (max-width: 768px) {
+    & {
+      min-width: 400px;
+      max-width: 500px;
+      height: 200px;
+    }
+
+    &__article { /* .card__article */
+      display: flex;
+    }
+
+    & &__image-container {
+      width: 40%;
+      clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+    }
+    
+    &:hover &__image-container, /* .card:hover .card__image-container */
+    &:focus &__image-container {
+      width: 40%;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+  }
+  
+}
+.button {
+  background-color: #DA71EB;
+  border: none;
+  color: white;
+  height: 20px;
+  border-radius: 5px;
+}

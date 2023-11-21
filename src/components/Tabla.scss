@@ -1,0 +1,21 @@
+table.tabla-alta{
+    border-collapse: collapse;
+    width: 95%;
+    margin: 1rem auto;
+    background-color: #A6A6A6;
+
+    th,td{
+        border: 1px solid;
+        padding: 8px;
+        text-align: left;
+
+    }
+    th{
+        background-color: #2A3340;
+        color: #E6D5CE;
+    }
+    td{
+        background-color: #D9B18F;
+
+    }
+}

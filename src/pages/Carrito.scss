@@ -1,0 +1,22 @@
+table.tabla-carrito {
+    border-collapse: collapse;
+    width: 95%;
+    margin: 1rem auto;
+    color: #E6D5CE;
+    background-color: #A6A6A6;
+    td{
+        background-color: #2A3340 ;
+    }
+    th, td {
+        border: 1px solid #D9B18F;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #595856;
+    }
+}
+body{
+    background-color: #A6A6A6;
+}
