@@ -1,5 +1,5 @@
 import  React from 'react' 
-import './Contacto.scss'
+// import './Contacto.scss' no lo toma netlify
 const Contacto = () => {
     return(
         <>
