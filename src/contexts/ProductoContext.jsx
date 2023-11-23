@@ -6,7 +6,7 @@ import { del, get, post, put } from "../utils/http";
 const ProductoContext = createContext()
 
 /* 2do -> El armado del Provider */
-const url = 'http://localhost:8080/productos/'
+const url = 'http://localhost:8080/api/productos/'
 
 const ProductoProvider = ( { children } ) => {
     const [productos, setProductos] = useState(null)
@@ -38,7 +38,6 @@ const ProductoProvider = ( { children } ) => {
    const actualizarProductoContext = async (productoEditar) => {
     try {
         const productoEditado = await put(url, productoEditar.id, productoEditar)
-        console.log(productoEditado)
         const nuevaDB = productos.map( producto => producto.id === productoEditado.id ? productoEditado : producto )
         setProductos(nuevaDB)
     } catch (error) {

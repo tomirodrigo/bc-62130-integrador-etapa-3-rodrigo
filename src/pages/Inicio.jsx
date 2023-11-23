@@ -7,8 +7,6 @@ const Inicio = () => {
   const { productos } = useContext(ProductoContext)
     return(
         <>
-
-  
   <main>
     <section className="section-cards">
       <header className="section-cards__header">
