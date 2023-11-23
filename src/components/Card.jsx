@@ -1,7 +1,6 @@
 import { useContext } from 'react'
 import './Card.scss'
 import CarritoContext from '../contexts/CarritoContext'
-import  'https://maxi-etapa-3.onrender.com/api/productos'
 
 const Card = ({ producto }) => {
   const { agregarCarritoContext } = useContext(CarritoContext)
